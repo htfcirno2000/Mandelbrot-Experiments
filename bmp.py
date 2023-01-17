@@ -78,7 +78,7 @@ def SaveBmp(bmp, path):
     b += struct.pack('<L', 40)  # dib size
     b += struct.pack('<L', bmp.width)   # width
     b += struct.pack('<L', bmp.height)  # height
-    b += struct.pack('<H', 8)   # planes
+    b += struct.pack('<H', 1)   # planes
     b += struct.pack('<H', 24)  # depth
     b += struct.pack('<L', 0)   # compression
     b += struct.pack('<L', 3 * bmp.width * bmp.height + bmp.height * padding)  #image size
